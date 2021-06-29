@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src=".js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+<div class="centered">
+  <p class="firstLine">  Welcome {{name}}!!!<br>Start Predicting</p>
+  <form method="POST" action="/profile">
+    <div class="secondLine"> Check for Stock <br>
+      <input class="InputStyle" name="stock" placeholder="Enter Stock Name "  type="text">
+      <br> <button class="col btn btn-purple-moon">Check</button> 
+    </div>
+  </form>
+  <div>{{check_1}}
+    <br> <img src={{url}} alt="graph">
+    <br> <br> <img src={{url2}} alt="graph_2">
+  </div>
+  <div><br></div>
+</div>
+{% endblock %}
